@@ -18,6 +18,33 @@
         h1 {
             color: #333;
         }
+        .search-bar {
+            margin: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .category {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .category-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #0078a8;
+        }
+        .category-header span {
+            margin-right: 10px;
+        }
         .agency-option {
             margin: 10px auto;
             max-width: 300px;
@@ -28,15 +55,24 @@
             text-decoration: none;
             color: #333;
             font-weight: bold;
-            display: block;
+            display: flex;
+            align-items: center;
             transition: background-color 0.3s;
         }
         .agency-option:hover {
             background-color: #e0e0e0;
         }
+        .agency-option.highlight {
+            background-color: #ffeb3b;
+        }
         .logo {
             margin-top: 20px;
             margin-bottom: 40px;
+        }
+        .agency-option img {
+            width: 40px;
+            height: auto;
+            margin-right: 15px;
         }
         .logo img {
             max-width: 200px;
@@ -49,11 +85,97 @@
     </div>
     <div class="container">
         <h1>여행사 찾기</h1>
-        <a href="#" class="agency-option">노랑풍선</a>
-        <a href="#" class="agency-option">하나투어</a>
-        <a href="#" class="agency-option">참좋은여행</a>
-        <a href="#" class="agency-option">모두투어</a>
-        <a href="#" class="agency-option">인터파크투어</a>
-    </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="여행사를 입력하세요" onkeyup="searchAgency()">
+        </div>
+
+         <div class="category">
+            <div class="category-header">
+                <span>A~F</span>
+                <span>➡️</span>
+            </div>
+            <a href="#" class="agency-option" id='lotte'>
+                <img src="https://i.namu.wiki/i/BqPuSlpHYd2TVUNabo12vxWDCoaCAS5WFWW-VMBH9tw334zCOC1sm40GBJpD4EdYZuRmgxdRZMlxSW8wTk8yrnaS45hjuqg41JY0CPYNzLVbeUO7wpB0Wt3TA7JoNlLxUfESWDtf_75z9uDlFl7ikg.svg" alt="롯데관광 로고">
+                롯데관광</a>
+            <a href="#" class="agency-option" id='yellowballoon'>
+                <img src="https://i.namu.wiki/i/tJvCaE7afjPsguRMD0hgSb3aAqU3hMxPudmZMSsV-obMqEhTTj4uCgj7BZwxB5ZfxsTYA6-OuubVAKhxbl20388XC8SNU1e3j8EdLU8ZVjtu2C9b9PHBa9EEXhGblPqeu0ErwM-G-Gh2_po5uwMrcw.webp" alt="노랑풍선 로고">
+                노랑풍선</a>
+            <a href="#" class="agency-option" id='modetour'>
+                <img src="https://i.namu.wiki/i/NJoCsIfGFSK-RXC_HhmTpfHaeOoD-bk6mxiWY4Y8gi6yhOhLncDdHHZsFW6IJYQ4VrISMM48jr9xB2Lyw72HpjxnwGKpbEVqMaan0X7bCXW6HGz45a1aSnwHQJG1jwsUOZR4VADn1JZZ_oTxryGHLA.svg" alt="모두투어 로고">
+                모두투어</a>
+            <a href="#" class="agency-option" id='nhn'>
+                <img src="https://i.namu.wiki/i/8fyFvSUXcs8ddYaRfEVJ8hZqWy57WfxMo97FPofMi79XsByecc77KJZytIsvYYKARFuvcUNSkY7cHa3lCWm_4RXWGpwX5BDcOtn4Qpdm3BuM_KO8gkLzLxLbhwrR-3aBKs2GCkS5-lyIWsqR0u1FOA.svg" alt="여행박사 로고">
+                NHN 여행박사</a>
+            <a href="#" class="agency-option" id='treasuretour'>
+                <img src="http://www.welfareclub.net/data/img/91d68b50595573896b292f3b6797a46d.jpg" alt="보물섬투어 로고">
+                보물섬투어</a>
+        </div>
+
+         <div class="category">
+            <div class="category-header">
+                <span>J~N</span>
+                <span>⬅️</span>
+            </div>
+            <a href="#" class="agency-option" id='hanatour'>
+                <img src="https://i.namu.wiki/i/gJwvL4piARxnzjYTdxs49jEbw5XOYuj4PMU3gwrUEaBa-gFm3j7Swn7OGWJpclrP4TzdiG46KU1rkdcm4uHP9PIi4ZAWAwAERML6sQSJ0aYH231e_3JQ7vFaFXg26PknprmbBi7pYdWJ7Otzuyovsg.svg" alt="하나투어 로고">
+                하나투어</a>
+            <a href="#" class="agency-option" id='modetour'>
+                <img src="https://i.namu.wiki/i/NJoCsIfGFSK-RXC_HhmTpfHaeOoD-bk6mxiWY4Y8gi6yhOhLncDdHHZsFW6IJYQ4VrISMM48jr9xB2Lyw72HpjxnwGKpbEVqMaan0X7bCXW6HGz45a1aSnwHQJG1jwsUOZR4VADn1JZZ_oTxryGHLA.svg" alt="모두투어 로고">
+                모두투어</a>
+            <a href="#" class="agency-option" id='tomorrow'>
+                <img src="https://smart.hanacard.co.kr/ATTACH/mou/images/event/main/logo_naeiltour02.png" alt="내일투어 로고">
+                내일투어</a>
+            <a href="#" class="agency-option" id='verygood'>
+                <img src="https://i.namu.wiki/i/YVstrnqdDL-kCceIUiHsrPshX3pYMWpbSq_RGlD16sHHARQRtR_-6SY9WeGeztzkuvwaJStx3MBKHHfaz6wgqErzjMrI5apt7U8AkOYwHq-9-AJb90uGmTWGpTz44qiixqVG_uWrZt2BP1iqGPpm5Q.webp" alt="참좋은여행 로고">
+                참좋은여행</a>
+            <a href="#" class="agency-option" id='interpark'>
+                <img src="https://i.namu.wiki/i/hAceIv2nFNEBwjW1HngaONWs6R5fH9bVjgV4CBHsSp9JwXb5nZzxYaLIOyUYetQfFfemLgyDes5wgVhI-FTAwfAnwmyQHHIkt1Y9uut1qITI5OO8yLK3a86UEPLRkJJrjKTnQjf3s_IaNEzQofdBBg.webp" alt="인터파크투어 로고">
+                인터파크투어</a>
+        </div>
+
+    <script>
+        function searchAgency() {
+            var input, filter, agencies, i;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            agencies = document.getElementsByClassName('agency-option');
+
+            for (i = 0; i < agencies.length; i++) {
+                agencies[i].classList.remove('highlight');
+            }
+
+            if (filter.includes('롯데') || filter.includes('LOTTE')) {
+                document.getElementById('lotte').classList.add('highlight');
+            }
+            if (filter.includes('노랑') || filter.includes('노란') || filter.includes('YELLOW')) {
+                document.getElementById('yellowballoon').classList.add('highlight');
+            }
+            if (filter.includes('모두') || filter.includes('MODE')) {
+                document.getElementById('modetour').classList.add('highlight');
+            }
+            if (filter.includes('여행박사') || filter.includes('NHN')) {
+                document.getElementById('nhn').classList.add('highlight');
+            }
+            if (filter.includes('보물섬') || filter.includes('TREASURE')) {
+                document.getElementById('treasuretour').classList.add('highlight');
+            }
+            if (filter.includes('하나') || filter.includes('HANA')) {
+                document.getElementById('hanatour').classList.add('highlight');
+            }
+            if (filter.includes('내일') || filter.includes('TOMORROW')) {
+                document.getElementById('tomorrow').classList.add('highlight');
+            }
+            if (filter.includes('참좋은') || filter.includes('VERY')) {
+                document.getElementById('verygood').classList.add('highlight');
+            }
+            if (filter.includes('인터파크') || filter.includes('interpark')) {
+                document.getElementById('interpark').classList.add('highlight');
+            }
+        }
+    </script>
+
+    
+
 </body>
 </html>
