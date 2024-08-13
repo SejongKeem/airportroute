@@ -42,6 +42,27 @@
             max-width: 200px;
             cursor: pointer;
         }
+        /* 다크 모드 스타일 */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+            }
+            h1 {
+                color: #e0e0e0;
+            }
+            .option {
+                background: #333333;
+                color: #e0e0e0;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            .option:hover {
+                background-color: #444444;
+            }
+            .logo img {
+                filter: brightness(0) invert(1); /* 로고 이미지 색상 반전 */
+            }
+        }
     </style>
 </head>
 <body>
