@@ -10,14 +10,8 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            background-colovr: #f0f0f0;
-        }
-        .logo {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        .logo img {
-            max-width: 200px;
+            background-color: #f0f0f0;
+            color: #333;
         }
         .header {
             display: flex;
@@ -25,6 +19,9 @@
             align-items: center;
             padding: 10px 20px;
             background-color: #f0f0f0;
+        }
+        .logo img {
+            max-width: 200px;
         }
         .home-button {
             padding: 10px 20px;
@@ -44,6 +41,9 @@
         }
         .search-bar {
             margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         input[type="text"] {
             padding: 10px;
@@ -51,12 +51,29 @@
             font-size: 16px;
             border-radius: 5px;
             border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+        .search-button {
+            padding: 10px;
+            background-color: #0078a8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #005f7a;
+        }
+        .search-button img {
+            width: 20px;
+            height: 20px;
         }
         .category {
             background-color: #e8f4f8;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 30px;
+            border: 3px solid #003366;
         }
         .category-header {
             display: flex;
@@ -66,13 +83,10 @@
             font-size: 1.5em;
             color: #0078a8;
         }
-        .category-header span {
-            margin-right: 10px;
-        }
         .airline-option {
             margin: 10px auto;
             max-width: 300px;
-            background: white;
+            background: #ffffff;
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -81,37 +95,149 @@
             font-weight: bold;
             display: flex;
             align-items: center;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, height 0.3s;
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
         }
         .airline-option.highlight {
             background-color: #ffeb3b;
+            height: 100px;
+            display: block;
+            text-align: center;
         }
         .airline-option img {
             width: 40px;
             height: auto;
             margin-right: 15px;
         }
-        .scroll-hint {
-            margin-top: 20px;
-            color: #0078a8;
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 15px; /* 패딩을 넉넉하게 설정 */
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-height: none;
+            overflow: visible;
         }
-        .counter-button {
-            margin-top: 20px;
-            padding: 10px;
+
+        .highlight-message {
+            margin-top: 10px;
+            color: #0078a8;
+            font-weight: normal;
+            font-size: 1.0m;
+            line-height: 1.5em;
+            white-space: nowrap; /* 줄바꿈을 허용 */
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .highlight-message span {
+            font-weight: bold;
+            color: #ff5722;
+        }
+
+        .counter {
+            color: #3f51b5;
+        }
+        .highlight-message.counter {
+            color: #3f51b5;
+        }
+        .t2-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px; /* 버튼과 텍스트 사이에 충분한 간격을 둠 */
             background-color: #0078a8;
             color: white;
-            border-radius: 5px;
             text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            white-space: nowrap;
         }
-        .counter-button:hover {
+
+        .t2-button:hover {
             background-color: #005f7a;
         }
+
+                /* 다크 모드 스타일 */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+            }
+            .header {
+                background-color: #1a1a1a;
+            }
+            .logo img {
+                max-width: 200px;
+                filter: brightness(0) invert(1);
+            }
+            .home-button {
+                background-color: #555555; /* 회색 버튼으로 변경 */
+                color: #e0e0e0;
+            }
+            .home-button:hover {
+                background-color: #777777;
+            }
+            h1 {
+                color: #e0e0e0;
+            }
+            .category {
+                background-color: #333;
+                border: 3px solid #555;
+            }
+            .category-header {
+                color: #87cefa;
+            }
+            .airline-option {
+                background: #555555;
+                color: #e0e0e0;
+            }
+            .airline-option.highlight {
+                background-color: #777777;
+            }
+            .airline-option img {
+                filter: none;
+            }
+            #asiana img,
+            #eastar img,
+            #aerok img,
+            #airpremia img,
+            #airbusan img {
+                filter: brightness(0) invert(1);
+            }
+            .highlight-message {
+                color: #bbbbbb;
+            }
+            .highlight-message span {
+                font-weight: bold;
+                color: #ff8c00;
+            }
+            .highlight-message .counter {
+                color: #87cefa;
+            }
+            .search-button {
+                background-color: transparent; /* 투명한 배경 */
+                border: none; /* 테두리 제거 */
+            }
+            .search-button img {
+                filter: brightness(0) invert(1); /* 흰색 돋보기 아이콘 */
+            }
+            .counter {
+                color: #3f51b5;
+            }
+        }           
     </style>
 </head>
 <body>
     <div class="header">
         <a href="https://www.airport.kr/ap/ko/index.do" class="logo">
-           <img src="./images/IIAC_jpg03.png" alt="인천공항 로고">
+            <img src="./images/IIAC_jpg03.png" alt="인천공항 로고">
         </a>
         <a href="index.html" class="home-button">첫 페이지로</a>
     </div>
@@ -120,193 +246,187 @@
         <h1>항공사로 찾기</h1>
 
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="항공편명 또는 항공사 이름을 입력하세요" onkeyup="searchAirline()">
+            <input type="text" id="searchInput" placeholder="항공사 이름 또는 항공편명을 입력하세요" onkeypress="handleKeyPress(event)">
+            <button class="search-button" onclick="searchAirlineHandler()">
+                <img src="https://img.icons8.com/material-rounded/24/ffffff/search.png" alt="검색">
+            </button>
         </div>
 
         <div class="category">
             <div class="category-header">
-                <span>A~F</span>
-                <span>➡️</span>
+                <span>A-F ➡️</span>
             </div>
-            <a href="#" class="airline-option" id="asiana">
+            <a href="#" class="airline-option" id="asiana" onclick="searchAirline('아시아나')">
                 <img src="https://flyasiana.com/C/pc/image/sub/img_ci_english.png" alt="아시아나항공 로고">
                 아시아나항공
             </a>
-            <a href="#" class="airline-option" id="tway">
+            <a href="#" class="airline-option" id="tway" onclick="searchAirline('티웨이')">
                 <img src="https://i.namu.wiki/i/vpDnwxGFJKeJ13S-pxf3SoFsFxlzUchMwVqU-uPDzmtf_nFbprh41tv49jW5HlCAfjxC59JIsOht2YgQT0KZ9oHSjLA29U6QbY9KyVeVDHaOqJyou1jwZ7K7aYPVFLkdBz_QPoQsLaRnxq4e2Tgqkw.svg" alt="티웨이항공 로고">
                 티웨이항공
             </a>
-            <a href="#" class="airline-option" id="eastar">
-                <img src="https://i.namu.wiki/i/-UQ-c-jxaMvY1HNxbxPRD9NGphGZ4Ar8T-o-D-zJ-EgVFPnTD7ahwmhRaaZ6spmL8CSiKpgUoNzuFK4RI671rZ4P8FnczMCGQ8Mek5mM4pcA6EroBO-dRMq7KUTArzAtIpPBvc7hW0daaJqLj2jjig.svg" alt="이스타항공 로고">
-                이스타항공
-            </a>
-            <a href="#" class="airline-option" id="airseoul">
+            <a href="#" class="airline-option" id="airseoul" onclick="searchAirline('에어서울')">
                 <img src="https://i.namu.wiki/i/bGL445YGNUI7CXrzYULnSq3OsqrBTdH1igEdu3G0UGsYu3EdNC172EKzqj3n54hV5uhhMuHVZUBGJrbf3x2FQ5V3Qn_4O8tN7rF9AUwGvUXwv_akI0abOiEIaNLuKVgd2lQAt0L_MgWmpO9lnC_k4A.svg" alt="에어서울 로고">
                 에어서울
             </a>
-            <a href="#" class="counter-button" id="af-counter">A~F 카운터</a>
+            <a href="#" class="airline-option" id="atof">
+                A B C D E F 카운터 항공사
+            </a>
         </div>
 
         <div class="category">
             <div class="category-header">
-                <span>H~G</span>
-                <span>➡️</span>
+                <span>G,H ⬆️</span>
             </div>
-            <a href="#" class="counter-button" id="hg-counter">H, G 카운터</a>
-        </div>
-
-        <div class="category">
-            <div class="category-header">
-                <span>J~N</span>
-                <span>⬅️</span>
-            </div>
-            <a href="#" class="airline-option" id="jejuair">
-                <img src="https://i.namu.wiki/i/OPLYD3_oDYoUPWlVaxZopsDt3QwfbEgxuMgSyguU-c4Kn2k0GbopmH89sLtb4FKwDHhzbx5QjMNucntXLARFZAEn_976sojm72QI0Ww8SuCi3APC8h_lWfIkBj8hfyYtD1at0W9cKQ3c_s5OCciSNQ.svg" alt="제주항공 로고">
-                제주항공
+            <a href="#" class="airline-option" id="eastar" onclick="searchAirline('이스타')">
+                <img src="https://i.namu.wiki/i/-UQ-c-jxaMvY1HNxbxPRD9NGphGZ4Ar8T-o-D-zJ-EgVFPnTD7ahwmhRaaZ6spmL8CSiKpgUoNzuFK4RI671rZ4P8FnczMCGQ8Mek5mM4pcA6EroBO-dRMq7KUTArzAtIpPBvc7hW0daaJqLj2jjig.svg" alt="이스타항공 로고">
+                이스타항공
             </a>
-            <a href="#" class="airline-option" id="aerok">
-                <img src="https://i.namu.wiki/i/vxBIxCj7JBlqBWg4K82WUbr7FdABUrRkE24ECO4w5mzUEUCMetfOeX-0zvzQkEX3ca2bYomkrCjTgYE9eo5Fwbb9oUHFgIJHpa8eSC53SJG4mNHadJZ6qpSOqcrvT3Kx90hjeFfy3VU_nufHaobngA.svg" alt="에어로케이 로고">
-                에어로케이
-            </a>
-            <a href="#" class="airline-option" id="airpremia">
+            <a href="#" class="airline-option" id="airpremia" onclick="searchAirline('에어프레미아')">
                 <img src="https://i.namu.wiki/i/hHqVWVf5Vc7skRW1kBTbwdJ9jrRSTJBvwmkOqqgGYZOc-exT6E4XC0M2Zxo4P1ud94sq2g_PEiplRGems8sNtPJZRexYOijw3eqyo-YzwP53csrnzmG-bb89_Kto02sb3P8uNsBYBZbwxwQem2HOsQ.svg" alt="에어프레미아 로고">
                 에어프레미아
             </a>
-            <a href="#" class="airline-option" id="airbusan">
+            <a href="#" class="airline-option" id="gorh">
+                G H 카운터 항공사
+            </a>
+        </div>
+
+        <div class="category">
+            <div class="category-header">
+                <span>⬅️ J-N</span>
+            </div>
+            <a href="#" class="airline-option" id="jejuair" onclick="searchAirline('제주항공')">
+                <img src="https://i.namu.wiki/i/OPLYD3_oDYoUPWlVaxZopsDt3QwfbEgxuMgSyguU-c4Kn2k0GbopmH89sLtb4FKwDHhzbx5QjMNucntXLARFZAEn_976sojm72QI0Ww8SuCi3APC8h_lWfIkBj8hfyYtD1at0W9cKQ3c_s5OCciSNQ.svg" alt="제주항공 로고">
+                제주항공
+            </a>
+            <a href="#" class="airline-option" id="aerok" onclick="searchAirline('에어로케이')">
+                <img src="https://i.namu.wiki/i/vxBIxCj7JBlqBWg4K82WUbr7FdABUrRkE24ECO4w5mzUEUCMetfOeX-0zvzQkEX3ca2bYomkrCjTgYE9eo5Fwbb9oUHFgIJHpa8eSC53SJG4mNHadJZ6qpSOqcrvT3Kx90hjeFfy3VU_nufHaobngA.svg" alt="에어로케이 로고">
+                에어로케이
+            </a>
+            <a href="#" class="airline-option" id="airbusan" onclick="searchAirline('에어부산')">
                 <img src="https://i.namu.wiki/i/r-w_5Kgd4Qbv5_DXW5r6JuWaZtH_j2JdmJ4s-XUtD4fkXEpifpcYSaw8TGaJoIGyZH5KmM5ZxKXC9UjjMIJ2J-emJNNbH8epBzdq4kWU3X8mHmwiknXTeKmAKb9ITVYHYY4MpwDc5V1f30SURTq4BA.svg" alt="에어부산 로고">
                 에어부산
             </a>
-            <a href="#" class="counter-button" id="jn-counter">J~N 카운터</a>
+            <a href="#" class="airline-option" id="jton">
+                J K L M N 카운터 항공사
+            </a>
         </div>
+        <a href="#" class="airline-option" id="t2">
+                제2터미널 항공사
+            </a>    
 
-        <div id="scroll-hint" class="scroll-hint"></div>
+    <script>
+        function searchAirline(airlineName) {
+            document.getElementById('searchInput').value = airlineName;
+            searchAirlineHandler();
+        }
+
+        function searchAirlineHandler() {
+            var input = document.getElementById('searchInput').value.toUpperCase();
+
+            // 숫자가 포함된 경우, 콜사인 부분만 추출 (첫 두 글자 또는 첫 글자 + 숫자 제거)
+            var inputWithoutNumbers = input.replace(/\d+$/, '');
+
+            fetch('t1airlines.json')
+                .then(response => response.json())
+                .then(data => {
+                    clearHighlights(); // 기존의 하이라이트 초기화
+
+                    var resultCount = {
+                        'A-F': 0,
+                        'G-H': 0,
+                        'J-N': 0,
+                        'T2': 0 // T2 카테고리 추가
+                    };
+
+                    data.forEach(airline => {
+                        if (airline.name.toUpperCase().includes(inputWithoutNumbers) || 
+                            airline.callsign.toUpperCase().includes(inputWithoutNumbers) || 
+                            airline.engname.toUpperCase().includes(inputWithoutNumbers)) {
+
+                            let counter = airline.counter;
+                            let category = getCategory(counter);
+
+                             if (counter === 'T2') {
+                                highlightT2(airline.name); // T2 처리
+                                resultCount['T2']++;
+                            } else if (resultCount[category] < 2) {
+                                highlightCounter(counter, airline.name);
+                                resultCount[category]++;
+                            }
+                        }
+                    });
+
+                    if (!Object.values(resultCount).some(count => count > 0)) {
+                        alert('해당 항공사를 찾을 수 없습니다.');
+                    }
+                });
+        }
+
+        function clearHighlights() {
+            document.querySelectorAll('.highlight').forEach(el => {
+                el.classList.remove('highlight');
+                el.querySelectorAll('.highlight-message').forEach(msg => msg.remove());
+            });
+        }
+
+        function highlightCounter(counter, name) {
+            let elementId;
+            let directionMessage;
+
+            if (['A', 'B', 'C', 'D', 'E', 'F'].includes(counter)) {
+                elementId = 'atof';
+                directionMessage = "오른쪽 통로로 이동하세요.";
+            } else if (['G', 'H'].includes(counter)) {
+                elementId = 'gorh';
+                directionMessage = "중앙 통로로 이동하세요.";
+            } else if (['J', 'K', 'L', 'M', 'N'].includes(counter)) {
+                elementId = 'jton';
+                directionMessage = "왼쪽 통로로 이동하세요.";
+            }
+
+            var element = document.getElementById(elementId);
+            element.classList.add('highlight');
+            element.innerHTML += `
+                <div class="highlight-message">
+                    <span>${name}</span>은(는) <span class="counter">${counter}</span> 카운터입니다.<br>
+                    ${directionMessage}
+                </div>`;
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function getCategory(counter) {
+            if (['A', 'B', 'C', 'D', 'E', 'F'].includes(counter)) {
+                return 'A-F';
+            } else if (['G', 'H'].includes(counter)) {
+                return 'G-H';
+            } else if (['J', 'K', 'L', 'M', 'N'].includes(counter)) {
+                return 'J-N';
+            } else if (counter === 'T2') {
+                return 'T2';
+            }
+            return '';
+        }
+
+       function highlightT2(name) {
+            var element = document.getElementById('t2');
+            element.classList.add('highlight');
+            element.innerHTML += `
+                <div class="highlight-message">
+                    <span>${name}</span>은(는) 제2터미널 취항 항공사입니다.<br>
+                    제2터미널로 이동하세요.
+                </div>
+                <a href="https://www.airport.kr/ap_lp/ko/svc/terinfo/termoving/termoving.do" class="t2-button">
+                    제2터미널 이동방법
+                </a>`;
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                searchAirlineHandler();
+            }
+        }
+    </script>
     </div>
-
-    <script>
-        function searchAirline() {
-            var input, filter, airlines, i;
-            input = document.getElementById('searchInput');
-            filter = input.value.toUpperCase();
-            airlines = document.getElementsByClassName('airline-option');
-
-            var highlighted = false;
-
-            for (i = 0; i < airlines.length; i++) {
-                airlines[i].classList.remove('highlight');
-            }
-
-            // Check each airline
-            if (filter.includes('OZ') || filter.includes('아시아나') || filter.includes('ASIANA')) {
-                highlightAirline('asiana');
-                highlighted = true;
-            }
-            if (filter.includes('7C') || filter.includes('제주') || filter.includes('JEJU')) {
-                highlightAirline('jejuair');
-                highlighted = true;
-            }
-            if (filter.includes('BX') || filter.includes('부산') || filter.includes('BUSAN')) {
-                highlightAirline('airbusan');
-                highlighted = true;
-            }
-            if (filter.includes('RS') || filter.includes('서울') || filter.includes('SEOUL')) {
-                highlightAirline('airseoul');
-                highlighted = true;
-            }
-            if (filter.includes('YP') || filter.includes('프레미아') || filter.includes('PREMIA')) {
-                highlightAirline('airpremia');
-                highlighted = true;
-            }
-            if (filter.includes('ZE') || filter.includes('이스타') || filter.includes('EASTER')) {
-                highlightAirline('eastar');
-                highlighted = true;
-            }
-            if (filter.includes('TW') || filter.includes('티웨이') || filter.includes('TWAY')) {
-                highlightAirline('tway');
-                highlighted = true;
-            }
-            if (filter.includes('RF') || filter.includes('에어로케이') || filter.includes('AEROK')) {
-                highlightAirline('aerok');
-                highlighted = true;
-            }
-
-            // Handle scroll hint
-            var hintDiv = document.getElementById('scroll-hint');
-            if (highlighted) {
-                hintDiv.innerText = "검색된 항공사가 아래에 있습니다. 스크롤 하여 확인하세요.";
-            } else {
-                hintDiv.innerText = "";
-            }
-        }
-
-        function highlightAirline(airlineId) {
-            var element = document.getElementById(airlineId);
-            element.classList.add('highlight');
-            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    </script>
-
-
-    <script>
-    // Load data from Excel file
-    var counterData = {};  // This will store the data from the Excel file
-    
-    fetch('항공사카운터정리.xlsx').then(response => {
-        return response.arrayBuffer();
-    }).then(data => {
-        var workbook = XLSX.read(new Uint8Array(data), {type: 'array'});
-        var firstSheet = workbook.Sheets[workbook.SheetNames[0]];
-        counterData = XLSX.utils.sheet_to_json(firstSheet);
-    });
-
-    function searchAirline() {
-        var input, filter, airlines, i;
-        input = document.getElementById('searchInput');
-        filter = input.value.toUpperCase();
-        airlines = document.getElementsByClassName('airline-option');
-
-        var highlighted = false;
-
-        for (i = 0; i < airlines.length; i++) {
-            airlines[i].classList.remove('highlight');
-        }
-         for (i = 0; i < counterData.length; i++) {
-        var airline = counterData[i]['항공사'];
-        var counter = counterData[i]['카운터'];
-        var callsign = counterData[i]['콜사인'];
-        var englishName = counterData[i]['영어'];
-        var searchTerms = [airline, callsign, englishName];
-
-        // 추가된 검색어를 통해 강조 표시하고 메시지를 표시
-        if (searchTerms.some(term => term && filter.includes(term.toUpperCase()))) {
-            highlightCounter(counter);
-            highlighted = true;
-            showSearchMessage(airline, counter);
-            break;  // 검색어에 해당하는 첫 번째 결과만 표시하고 루프 종료
-            }
-        }
-
-        if (!highlighted) {
-         document.getElementById('scroll-hint').innerText = "";
-                }
-            }
-
-    function highlightCounter(counter) {
-        var counterId = counter.toLowerCase() + '-counter';
-        var element = document.getElementById(counterId);
-        if (element) {
-            element.classList.add('highlight');
-            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        }
-
-    function showSearchMessage(airline, counter) {
-        var hintDiv = document.getElementById('scroll-hint');
-        hintDiv.innerText = `${airline}은(는) ${counter} 카운터에 있습니다.`;
-        }
-    </script>
-
-
-
-
 </body>
 </html>
