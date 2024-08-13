@@ -123,7 +123,7 @@
             justify-content: center; /* 가운데 정렬 */
             align-items: center; /* 가운데 정렬 */
             max-height: none; /* 최대 높이를 제한하지 않음 */
-            overflow: hidden; /* 결과가 영역을 넘어가지 않도록 함 */
+            overflow: visible; /* 결과가 영역을 넘어가지 않도록 함 */
         }
 
         .highlight-message {
@@ -157,6 +157,7 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
+            white-space: nowrap; /* 버튼 텍스트가 줄바꿈되지 않도록 설정 */
         }
 
         .t2-button:hover {
@@ -411,7 +412,7 @@
             element.classList.add('highlight');
             element.innerHTML += `
                 <div class="highlight-message">
-                    <span>${name}</span>은 제2터미널 취항 항공사입니다.<br>
+                    <span>${name}</span>은(는) 제2터미널 취항 항공사입니다.<br>
                     제2터미널로 이동하세요.
                 </div>
                 <a href="https://www.airport.kr/ap_lp/ko/svc/terinfo/termoving/termoving.do" class="t2-button">
