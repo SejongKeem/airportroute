@@ -212,26 +212,25 @@
             function searchAirline() {
                 var input = document.getElementById('searchInput').value.toUpperCase();
                 fetch('t1airlines.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        var found = false;
+                .then(response => response.json())
+                .then(data => {
+                    var found = false;
 
-                        data.forEach(airline => {
-                            if (input.includes(airline.name.toUpperCase()) || 
-                                input.includes(airline.callsign.toUpperCase()) || 
-                                input.includes(airline.engname.toUpperCase())) {
+                data.forEach(airline => {
+                    if (airline.name.toUpperCase().includes(input) || 
+                        airline.callsign.toUpperCase().includes(input) || 
+                        airline.engname.toUpperCase().includes(input)) {
 
-                                highlightCounter(airline.counter, airline.name);
-                                found = true;
-                            }
-                        });
+                    highlightCounter(airline.counter, airline.name);
+                    found = true;
+                    }
+                });
 
-                        if (!found) {
-                            alert('해당 항공사를 찾을 수 없습니다.');
-                        }
-                    });
+                if (!found) {
+                    alert('해당 항공사를 찾을 수 없습니다.');
+                    }
+                });
             }
-
             function highlightCounter(counter, name) {
                 let elementId;
 
