@@ -112,18 +112,40 @@
             height: auto;
             margin-right: 15px;
         }
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 15px; /* 상하 간격 유지 */
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            display: flex; /* Flexbox 사용 */
+            flex-direction: column; /* 세로로 정렬 */
+            justify-content: center; /* 가운데 정렬 */
+            align-items: center; /* 가운데 정렬 */
+            max-height: none; /* 최대 높이를 제한하지 않음 */
+            overflow: hidden; /* 결과가 영역을 넘어가지 않도록 함 */
+        }
+
         .highlight-message {
             margin-top: 10px;
             color: #0078a8;
             font-weight: normal;
-            font-size: 1.2em;
+            font-size: 1.0em; 
             line-height: 1.5em;
+            white-space: nowrap; /* 줄바꿈을 허용하지 않음 */
+            text-align: center;
+            overflow: hidden; /* 텍스트가 넘치지 않도록 설정 */
+            text-overflow: ellipsis; /* 넘친 텍스트를 말줄임표로 표시 */
         }
         .highlight-message span {
             font-weight: bold;
             color: #ff5722;
         }
-        .highlight-message .counter {
+
+        .counter {
+            color: #3f51b5;
+        }
+        .highlight-message.counter {
             color: #3f51b5;
         }
 
@@ -178,6 +200,7 @@
                 color: #bbbbbb;
             }
             .highlight-message span {
+                font-weight: bold;
                 color: #ff8c00;
             }
             .highlight-message .counter {
@@ -189,6 +212,9 @@
             }
             .search-button img {
                 filter: brightness(0) invert(1); /* 흰색 돋보기 아이콘 */
+            }
+            .counter {
+                color: #3f51b5;
             }
         }           
     </style>
@@ -279,28 +305,46 @@
         function searchAirlineHandler() {
             var input = document.getElementById('searchInput').value.toUpperCase();
 
-            // 숫자가 포함된 경우 콜사인 부분만 추출
+            // 숫자가 포함된 경우, 콜사인 부분만 추출 (첫 두 글자 또는 첫 글자 + 숫자 제거)
             var inputWithoutNumbers = input.replace(/\d+$/, '');
 
             fetch('t1airlines.json')
                 .then(response => response.json())
                 .then(data => {
-                    var found = false;
+                    clearHighlights(); // 기존의 하이라이트 초기화
+
+                    var resultCount = {
+                        'A-F': 0,
+                        'G-H': 0,
+                        'J-N': 0
+                    };
 
                     data.forEach(airline => {
                         if (airline.name.toUpperCase().includes(inputWithoutNumbers) || 
                             airline.callsign.toUpperCase().includes(inputWithoutNumbers) || 
                             airline.engname.toUpperCase().includes(inputWithoutNumbers)) {
 
-                            highlightCounter(airline.counter, airline.name);
-                            found = true;
+                            let counter = airline.counter;
+                            let category = getCategory(counter);
+
+                            if (resultCount[category] < 2) {
+                                highlightCounter(counter, airline.name);
+                                resultCount[category]++;
+                            }
                         }
                     });
 
-                    if (!found) {
+                    if (!Object.values(resultCount).some(count => count > 0)) {
                         alert('해당 항공사를 찾을 수 없습니다.');
                     }
                 });
+        }
+
+        function clearHighlights() {
+            document.querySelectorAll('.highlight').forEach(el => {
+                el.classList.remove('highlight');
+                el.querySelectorAll('.highlight-message').forEach(msg => msg.remove());
+            });
         }
 
         function highlightCounter(counter, name) {
@@ -322,10 +366,21 @@
             element.classList.add('highlight');
             element.innerHTML += `
                 <div class="highlight-message">
-                    <span>${name}</span>은(는) <span class="counter">${counter}</span>카운터입니다.<br>
+                    <span>${name}</span>은(는) <span class="counter">${counter}</span> 카운터입니다.<br>
                     ${directionMessage}
                 </div>`;
             element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function getCategory(counter) {
+            if (['A', 'B', 'C', 'D', 'E', 'F'].includes(counter)) {
+                return 'A-F';
+            } else if (['G', 'H'].includes(counter)) {
+                return 'G-H';
+            } else if (['J', 'K', 'L', 'M', 'N'].includes(counter)) {
+                return 'J-N';
+            }
+            return '';
         }
 
         function handleKeyPress(event) {
