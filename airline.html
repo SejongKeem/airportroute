@@ -209,19 +209,19 @@
                 <span>A-F</span>
                 <span>➡️</span>
             </div>
-            <a href="#" class="airline-option" id="asiana">
+            <a href="#" class="airline-option" id="asiana onclick="searchAirline('아시아나')">
                 <img src="https://flyasiana.com/C/pc/image/sub/img_ci_english.png" alt="아시아나항공 로고">
                 아시아나항공
             </a>
-            <a href="#" class="airline-option" id="tway">
+            <a href="#" class="airline-option" id="tway" onclick="searchAirline('티웨이')">
                 <img src="https://i.namu.wiki/i/vpDnwxGFJKeJ13S-pxf3SoFsFxlzUchMwVqU-uPDzmtf_nFbprh41tv49jW5HlCAfjxC59JIsOht2YgQT0KZ9oHSjLA29U6QbY9KyVeVDHaOqJyou1jwZ7K7aYPVFLkdBz_QPoQsLaRnxq4e2Tgqkw.svg" alt="티웨이항공 로고">
                 티웨이항공
             </a>
-            <a href="#" class="airline-option" id="eastar">
+            <a href="#" class="airline-option" id="eastar" onclick="searchAirline('이스타')">
                 <img src="https://i.namu.wiki/i/-UQ-c-jxaMvY1HNxbxPRD9NGphGZ4Ar8T-o-D-zJ-EgVFPnTD7ahwmhRaaZ6spmL8CSiKpgUoNzuFK4RI671rZ4P8FnczMCGQ8Mek5mM4pcA6EroBO-dRMq7KUTArzAtIpPBvc7hW0daaJqLj2jjig.svg" alt="이스타항공 로고">
                 이스타항공
             </a>
-            <a href="#" class="airline-option" id="airseoul">
+            <a href="#" class="airline-option" id="airseoul" onclick="searchAirline('에어서울')">
                 <img src="https://i.namu.wiki/i/bGL445YGNUI7CXrzYULnSq3OsqrBTdH1igEdu3G0UGsYu3EdNC172EKzqj3n54hV5uhhMuHVZUBGJrbf3x2FQ5V3Qn_4O8tN7rF9AUwGvUXwv_akI0abOiEIaNLuKVgd2lQAt0L_MgWmpO9lnC_k4A.svg" alt="에어서울 로고">
                 에어서울
             </a>
@@ -242,22 +242,22 @@
 
         <div class="category">
             <div class="category-header">
-                <span>J-N</span>
                 <span>⬅️</span>
+                <span>J-N</span>
             </div>
-            <a href="#" class="airline-option" id="jejuair">
+            <a href="#" class="airline-option" id="jejuair" onclick="searchAirline('제주항공')">
                 <img src="https://i.namu.wiki/i/OPLYD3_oDYoUPWlVaxZopsDt3QwfbEgxuMgSyguU-c4Kn2k0GbopmH89sLtb4FKwDHhzbx5QjMNucntXLARFZAEn_976sojm72QI0Ww8SuCi3APC8h_lWfIkBj8hfyYtD1at0W9cKQ3c_s5OCciSNQ.svg" alt="제주항공 로고">
                 제주항공
             </a>
-            <a href="#" class="airline-option" id="aerok">
+            <a href="#" class="airline-option" id="aerok" onclick="searchAirline('에어로케이')">
                 <img src="https://i.namu.wiki/i/vxBIxCj7JBlqBWg4K82WUbr7FdABUrRkE24ECO4w5mzUEUCMetfOeX-0zvzQkEX3ca2bYomkrCjTgYE9eo5Fwbb9oUHFgIJHpa8eSC53SJG4mNHadJZ6qpSOqcrvT3Kx90hjeFfy3VU_nufHaobngA.svg" alt="에어로케이 로고">
                 에어로케이
             </a>
-            <a href="#" class="airline-option" id="airpremia">
+            <a href="#" class="airline-option" id="airpremia" onclick="searchAirline('에어프레미아')">
                 <img src="https://i.namu.wiki/i/hHqVWVf5Vc7skRW1kBTbwdJ9jrRSTJBvwmkOqqgGYZOc-exT6E4XC0M2Zxo4P1ud94sq2g_PEiplRGems8sNtPJZRexYOijw3eqyo-YzwP53csrnzmG-bb89_Kto02sb3P8uNsBYBZbwxwQem2HOsQ.svg" alt="에어프레미아 로고">
                 에어프레미아
             </a>
-            <a href="#" class="airline-option" id="airbusan">
+            <a href="#" class="airline-option" id="airbusan"onclick="searchAirline('에어부산')">
                 <img src="https://i.namu.wiki/i/r-w_5Kgd4Qbv5_DXW5r6JuWaZtH_j2JdmJ4s-XUtD4fkXEpifpcYSaw8TGaJoIGyZH5KmM5ZxKXC9UjjMIJ2J-emJNNbH8epBzdq4kWU3X8mHmwiknXTeKmAKb9ITVYHYY4MpwDc5V1f30SURTq4BA.svg" alt="에어부산 로고">
                 에어부산
             </a>
@@ -266,32 +266,33 @@
             </a>
         </div>    
     <script>
-    function searchAirline() {
-        var input = document.getElementById('searchInput').value.toUpperCase();
+    function searchAirline(airlineName) {
+                document.getElementById('searchInput').value = airlineName;
+                searchAirlineHandler();
+            }
 
-        // 숫자가 포함된 경우 콜사인 부분만 추출
-        var inputWithoutNumbers = input.replace(/\d+$/, '');
+            function searchAirlineHandler() {
+                var input = document.getElementById('searchInput').value.toUpperCase();
+                fetch('t1airlines.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        var found = false;
 
-        fetch('t1airlines.json')
-            .then(response => response.json())
-            .then(data => {
-                var found = false;
+                        data.forEach(airline => {
+                            if (airline.name.toUpperCase().includes(input) || 
+                                airline.callsign.toUpperCase().includes(input) || 
+                                airline.engname.toUpperCase().includes(input)) {
 
-                data.forEach(airline => {
-                    if (airline.name.toUpperCase().includes(inputWithoutNumbers) || 
-                        airline.callsign.toUpperCase().includes(inputWithoutNumbers) || 
-                        airline.engname.toUpperCase().includes(inputWithoutNumbers)) {
+                                highlightCounter(airline.counter, airline.name);
+                                found = true;
+                            }
+                        });
 
-                        highlightCounter(airline.counter, airline.name);
-                        found = true;
+                        if (!found) {
+                            alert('해당 항공사를 찾을 수 없습니다.');
                         }
                     });
-
-                if (!found) {
-                    alert('해당 항공사를 찾을 수 없습니다.');
-                }
-            });
-        }
+            }
 
     function highlightCounter(counter, name) {
         let elementId;
@@ -319,10 +320,10 @@
     }
 
     function handleKeyPress(event) {
-        if (event.key === "Enter") {
-            searchAirline();
+            if (event.key === "Enter") {
+                searchAirlineHandler();
+            }
         }
-    }
     </script>
     </div>
 </body>
