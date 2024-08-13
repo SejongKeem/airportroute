@@ -279,14 +279,13 @@
         function searchAirlineHandler() {
             var input = document.getElementById('searchInput').value.toUpperCase();
 
-            // 숫자가 포함된 경우, 콜사인 부분만 추출
+            // 숫자가 포함된 경우 콜사인 부분만 추출
             var inputWithoutNumbers = input.replace(/\d+$/, '');
 
             fetch('t1airlines.json')
                 .then(response => response.json())
                 .then(data => {
                     var found = false;
-                    clearHighlights(); // 기존의 하이라이트 초기화
 
                     data.forEach(airline => {
                         if (airline.name.toUpperCase().includes(inputWithoutNumbers) || 
@@ -303,13 +302,6 @@
                     }
                 });
         }
-
-        // function clearHighlights() {
-        //     document.querySelectorAll('.highlight').forEach(el => {
-        //         el.classList.remove('highlight');
-        //         el.querySelectorAll('.highlight-message').forEach(msg => msg.remove());
-        //     });
-        // }
 
         function highlightCounter(counter, name) {
             let elementId;
