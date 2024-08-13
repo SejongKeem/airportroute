@@ -1,5 +1,53 @@
 [
     {
+        "name": "아시아나항공",
+        "callsign": "OZ",
+        "engname": "ASIANA",
+        "counter": "A"
+    },    
+    {
+        "name": "제주항공",
+        "callsign": "7C",
+        "engname": "JEJU",
+        "counter": "L"
+    },
+    {
+        "name": "에어부산",
+        "callsign": "BX",
+        "engname": "BUSAN",
+        "counter": "K"
+    },
+    {
+        "name": "에어서울",
+        "callsign": "RS",
+        "engname": "SEOUL",
+        "counter": "D"
+    },
+    {
+        "name": "에어프레미아",
+        "callsign": "YP",
+        "engname": "PREMIA",
+        "counter": "H"
+    },
+    {
+        "name": "이스타항공",
+        "callsign": "ZE",
+        "engname": "EASTAR",
+        "counter": "H"
+    },
+    {
+        "name": "티웨이항공",
+        "callsign": "TW",
+        "engname": "TWAY",
+        "counter": "F"
+    },
+    {
+        "name": "에어로케이",
+        "callsign": "RF",
+        "engname": "AEROK",
+        "counter": "J"
+    },
+    {
         "name": "그레이터베이항공",
         "callsign": "HB",
         "engname": "GREATER BAY",
