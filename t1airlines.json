@@ -1,0 +1,350 @@
+[
+    {
+        "name": "그레이터베이항공",
+        "callsign": "HB",
+        "engname": "GREATER BAY",
+        "counter": "E"
+    },
+    {
+        "name": "라오항공",
+        "callsign": "QV",
+        "engname": "LAO",
+        "counter": "H"
+    },
+    {
+        "name": "루프트한자",
+        "callsign": "LH",
+        "engname": "LUFTHANSA",
+        "counter": "J"
+    },
+    {
+        "name": "말레이시아항공",
+        "callsign": "MH",
+        "engname": "MALAYSIA",
+        "counter": "M"
+    },
+    {
+        "name": "몽골항공",
+        "callsign": "OM",
+        "engname": "MONGOLIAN",
+        "counter": "J"
+    },
+    {
+        "name": "미얀마국제항공",
+        "callsign": "8M",
+        "engname": "MYANMAR",
+        "counter": "N"
+    },
+    {
+        "name": "바틱에어",
+        "callsign": "OD",
+        "engname": "BATIK",
+        "counter": "H"
+    },
+    {
+        "name": "베트남항공",
+        "callsign": "VN",
+        "engname": "VIETNAM",
+        "counter": "E"
+    },
+    {
+        "name": "북경수도항공",
+        "callsign": "JD",
+        "engname": "BEIJING CAPITAL",
+        "counter": "K"
+    },
+    {
+        "name": "비엣젯항공",
+        "callsign": "VJ",
+        "engname": "VIETJET",
+        "counter": "E"
+    },
+    {
+        "name": "사우디아항공",
+        "callsign": "SV",
+        "engname": "SAUDIA",
+        "counter": "F"
+    },
+    {
+        "name": "사천항공",
+        "callsign": "3U",
+        "engname": "SICHUAN",
+        "counter": "E"
+    },
+    {
+        "name": "산동항공",
+        "callsign": "SC",
+        "engname": "SHANDONG",
+        "counter": "N"
+    },
+    {
+        "name": "상해항공",
+        "callsign": "FM",
+        "engname": "SHANGHAI",
+        "counter": "J"
+    },
+    {
+        "name": "세부퍼시픽",
+        "callsign": "5J",
+        "engname": "SEBU PACIFIC",
+        "counter": "D"
+    },
+    {
+        "name": "스리랑카항공",
+        "callsign": "UL",
+        "engname": "SRI LANKAN",
+        "counter": "H"
+    },
+    {
+        "name": "스위스항공",
+        "callsign": "LX",
+        "engname": "SWISS",
+        "counter": "J"
+    },
+    {
+        "name": "스카이앙코르항공",
+        "callsign": "ZA",
+        "engname": "SKY ANGKOR",
+        "counter": "K"
+    },
+    {
+        "name": "스쿠트항공",
+        "callsign": "TR",
+        "engname": "SCOOT",
+        "counter": "F"
+    },
+    {
+        "name": "심천항공",
+        "callsign": "ZH",
+        "engname": "SHENZHEN",
+        "counter": "M"
+    },
+    {
+        "name": "싱가포르항공",
+        "callsign": "SQ",
+        "engname": "SINGAPORE",
+        "counter": "D"
+    },
+    {
+        "name": "아메리칸항공",
+        "callsign": "AA",
+        "engname": "AMERICAN",
+        "counter": "K"
+    },
+    {
+        "name": "에미레이트항공",
+        "callsign": "EK",
+        "engname": "EMIRATES",
+        "counter": "K"
+    },
+    {
+        "name": "에바항공",
+        "callsign": "BR",
+        "engname": "EVA",
+        "counter": "E"
+    },
+    {
+        "name": "에어로몽골리아",
+        "callsign": "M0",
+        "engname": "AERO MONGOLIA",
+        "counter": "K"
+    },
+    {
+        "name": "에어마카오",
+        "callsign": "NX",
+        "engname": "MACAU",
+        "counter": "N"
+    },
+    {
+        "name": "에어아스타나",
+        "callsign": "KC",
+        "engname": "ASTANA",
+        "counter": "N"
+    },
+    {
+        "name": "에어아시아",
+        "callsign": "AK",
+        "engname": "AIR ASIA",
+        "counter": "M"
+    },
+    {
+        "name": "에어인디아",
+        "callsign": "AI",
+        "engname": "INDIA",
+        "counter": "H"
+    },
+    {
+        "name": "에어재팬",
+        "callsign": "NQ",
+        "engname": "AIR JAPAN",
+        "counter": "E"
+    },
+    {
+        "name": "에어캐나다",
+        "callsign": "AC",
+        "engname": "CANADA",
+        "counter": "J"
+    },
+    {
+        "name": "에티오피아항공",
+        "callsign": "ET",
+        "engname": "ETHIOPIAN",
+        "counter": "F"
+    },
+    {
+        "name": "에티하드항공",
+        "callsign": "EY",
+        "engname": "ETIHAD",
+        "counter": "K"
+    },
+    {
+        "name": "우즈베키스탄항공",
+        "callsign": "HY",
+        "engname": "UZBEKISTAN",
+        "counter": "E"
+    },
+    {
+        "name": "유나이티드항공",
+        "callsign": "UA",
+        "engname": "UNITED",
+        "counter": "D"
+    },
+    {
+        "name": "젯스타항공",
+        "callsign": "JQ",
+        "engname": "JETSTAR",
+        "counter": "H"
+    },
+    {
+        "name": "중국국제항공",
+        "callsign": "CA",
+        "engname": "AIR CHINA",
+        "counter": "M"
+    },
+    {
+        "name": "중국남방항공",
+        "callsign": "CZ",
+        "engname": "CHINA SOUTHERN",
+        "counter": "E"
+    },
+    {
+        "name": "중국동방항공",
+        "callsign": "MU",
+        "engname": "CHINA EASTERN",
+        "counter": "J"
+    },
+    {
+        "name": "집에어",
+        "callsign": "ZG",
+        "engname": "ZIPAIR",
+        "counter": "M"
+    },
+    {
+        "name": "천진항공",
+        "callsign": "GS",
+        "engname": "TIANJIN",
+        "counter": "J"
+    },
+    {
+        "name": "청도항공",
+        "callsign": "QW",
+        "engname": "QINGDAO",
+        "counter": "J"
+    },
+    {
+        "name": "춘추항공",
+        "callsign": "9C",
+        "engname": "SPRING",
+        "counter": "E"
+    },
+    {
+        "name": "카타르항공",
+        "callsign": "QR",
+        "engname": "QATAR",
+        "counter": "J"
+    },
+    {
+        "name": "캐세이퍼시픽",
+        "callsign": "CX",
+        "engname": "CATHAY PACIFIC",
+        "counter": "K"
+    },
+    {
+        "name": "콴타스항공",
+        "callsign": "QF",
+        "engname": "QANTAS",
+        "counter": "H"
+    },
+    {
+        "name": "타이거에어타이완",
+        "callsign": "IT",
+        "engname": "TIGERAIR TAIWAN",
+        "counter": "H"
+    },
+    {
+        "name": "타이에어아시아엑스",
+        "callsign": "XJ",
+        "engname": "THAI AIRASIA X",
+        "counter": "M"
+    },
+    {
+        "name": "타이항공",
+        "callsign": "TG",
+        "engname": "THAI AIRWAYS",
+        "counter": "H"
+    },
+    {
+        "name": "터키항공",
+        "callsign": "TK",
+        "engname": "TURKISH",
+        "counter": "D"
+    },
+    {
+        "name": "폴란드항공",
+        "callsign": "LO",
+        "engname": "LOT",
+        "counter": "K"
+    },
+    {
+        "name": "피치항공",
+        "callsign": "MM",
+        "engname": "PEACH",
+        "counter": "K"
+    },
+    {
+        "name": "핀에어",
+        "callsign": "AY",
+        "engname": "FINNAIR",
+        "counter": "J"
+    },
+    {
+        "name": "필리핀에어아시아",
+        "callsign": "Z2",
+        "engname": "AIRASIA PHILIPPINES",
+        "counter": "K"
+    },
+    {
+        "name": "필리핀항공",
+        "callsign": "PR",
+        "engname": "PHILIPPINE",
+        "counter": "M"
+    },
+    {
+        "name": "하와이안항공",
+        "callsign": "HA",
+        "engname": "HAWIIAN",
+        "counter": "J"
+    },
+    {
+        "name": "홍콩익스프레스",
+        "callsign": "UO",
+        "engname": "HK EXPRESS",
+        "counter": "H"
+    },
+    {
+        "name": "홍콩항공",
+        "callsign": "HX",
+        "engname": "HONGKONG",
+        "counter": "M"
+    }
+]
