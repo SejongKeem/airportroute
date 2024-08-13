@@ -148,6 +148,20 @@
         .highlight-message.counter {
             color: #3f51b5;
         }
+        .t2-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #0078a8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .t2-button:hover {
+            background-color: #005f7a;
+        }
 
                 /* 다크 모드 스타일 */
         @media (prefers-color-scheme: dark) {
@@ -378,7 +392,7 @@
                 </div>`;
             element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-        
+
         function getCategory(counter) {
             if (['A', 'B', 'C', 'D', 'E', 'F'].includes(counter)) {
                 return 'A-F';
@@ -392,14 +406,17 @@
             return '';
         }
 
-        function highlightT2(name) {
+       function highlightT2(name) {
             var element = document.getElementById('t2');
             element.classList.add('highlight');
             element.innerHTML += `
                 <div class="highlight-message">
                     <span>${name}</span>은 제2터미널 취항 항공사입니다.<br>
-                    제2터미널로 이동하세요. 
-                </div>`;
+                    제2터미널로 이동하세요.
+                </div>
+                <a href="https://www.airport.kr/ap_lp/ko/svc/terinfo/termoving/termoving.do" class="t2-button">
+                    제2터미널 이동방법
+                </a>`;
             element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
