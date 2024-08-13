@@ -54,6 +54,12 @@
         "counter": "E"
     },
     {
+        "name": "로얄브루나이항공",
+        "callsign": "BI",
+        "engname": "ROYAL BRUNEI",
+        "counter": "K"
+    },
+    {
         "name": "라오항공",
         "callsign": "QV",
         "engname": "LAO",
