@@ -127,6 +127,7 @@
             color: #3f51b5;
         }
 
+                /* 다크 모드 스타일 */
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #1a1a1a;
@@ -140,10 +141,11 @@
                 filter: brightness(0) invert(1);
             }
             .home-button {
-                background-color: #005f7a;
+                background-color: #555555; /* 회색 버튼으로 변경 */
+                color: #e0e0e0;
             }
             .home-button:hover {
-                background-color: #003f5c;
+                background-color: #777777;
             }
             h1 {
                 color: #e0e0e0;
@@ -181,7 +183,14 @@
             .highlight-message .counter {
                 color: #87cefa;
             }
-        }
+            .search-button {
+                background-color: transparent; /* 투명한 배경 */
+                border: none; /* 테두리 제거 */
+            }
+            .search-button img {
+                filter: brightness(0) invert(1); /* 흰색 돋보기 아이콘 */
+            }
+        }           
     </style>
 </head>
 <body>
@@ -204,8 +213,7 @@
 
         <div class="category">
             <div class="category-header">
-                <span>A-F</span>
-                <span>➡️</span>
+                <span>A-F ➡️</span>
             </div>
             <a href="#" class="airline-option" id="asiana" onclick="searchAirline('아시아나')">
                 <img src="https://flyasiana.com/C/pc/image/sub/img_ci_english.png" alt="아시아나항공 로고">
@@ -226,8 +234,7 @@
 
         <div class="category">
             <div class="category-header">
-                <span>G,H</span>
-                <span>⬆️</span>
+                <span>G,H ⬆️</span>
             </div>
             <a href="#" class="airline-option" id="eastar" onclick="searchAirline('이스타')">
                 <img src="https://i.namu.wiki/i/-UQ-c-jxaMvY1HNxbxPRD9NGphGZ4Ar8T-o-D-zJ-EgVFPnTD7ahwmhRaaZ6spmL8CSiKpgUoNzuFK4RI671rZ4P8FnczMCGQ8Mek5mM4pcA6EroBO-dRMq7KUTArzAtIpPBvc7hW0daaJqLj2jjig.svg" alt="이스타항공 로고">
@@ -244,8 +251,7 @@
 
         <div class="category">
             <div class="category-header">
-                <span>⬅️</span>
-                <span>J-N</span>
+                <span>⬅️ J-N</span>
             </div>
             <a href="#" class="airline-option" id="jejuair" onclick="searchAirline('제주항공')">
                 <img src="https://i.namu.wiki/i/OPLYD3_oDYoUPWlVaxZopsDt3QwfbEgxuMgSyguU-c4Kn2k0GbopmH89sLtb4FKwDHhzbx5QjMNucntXLARFZAEn_976sojm72QI0Ww8SuCi3APC8h_lWfIkBj8hfyYtD1at0W9cKQ3c_s5OCciSNQ.svg" alt="제주항공 로고">
