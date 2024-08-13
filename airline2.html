@@ -99,10 +99,13 @@
             transition: background-color 0.3s, height 0.3s;
             height: 50px;
             overflow: hidden;
+            position: relative;
         }
         .airline-option.highlight {
             background-color: #ffeb3b;
-            height: auto;
+            height: 100px;
+            display: block;
+            text-align: center;
         }
         .airline-option img {
             width: 40px;
@@ -113,7 +116,15 @@
             margin-top: 10px;
             color: #0078a8;
             font-weight: normal;
-            font-size: 0.9em;
+            font-size: 1.2em;
+            line-height: 1.5em;
+        }
+        .highlight-message span {
+            font-weight: bold;
+            color: #ff5722; /* 항공사 이름 색상 */
+        }
+        .highlight-message .counter {
+            color: #3f51b5; /* 카운터 번호 색상 */
         }
     </style>
 </head>
@@ -187,7 +198,6 @@
                             alert('해당 항공사를 찾을 수 없습니다.');
                         }
                     });
-                console.log("Search function is running");
             }
 
             function highlightCounter(counter, name) {
@@ -203,7 +213,7 @@
 
                 var element = document.getElementById(elementId);
                 element.classList.add('highlight');
-                element.innerHTML += `<div class="highlight-message">${name}은(는) ${counter}카운터입니다.</div>`;
+                element.innerHTML += `<div class="highlight-message"><span>${name}</span>은(는) <span class="counter">${counter}</span>카운터입니다.</div>`;
                 element.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
 
