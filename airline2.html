@@ -112,18 +112,34 @@
             height: auto;
             margin-right: 15px;
         }
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            max-height: none; /* 최대 높이를 제한하지 않음 */
+        }
+
         .highlight-message {
             margin-top: 10px;
             color: #0078a8;
             font-weight: normal;
             font-size: 1.2em;
             line-height: 1.5em;
+            white-space: normal; /* 줄바꿈을 허용 */
+            overflow: visible; /* 텍스트가 잘리지 않도록 함 */
         }
         .highlight-message span {
             font-weight: bold;
             color: #ff5722;
+            display: block; /* 각 결과를 블록으로 표시하여 세로로 정렬 */
         }
-        .highlight-message .counter {
+
+        .counter {
+            color: #3f51b5;
+        }
+        .highlight-message.counter {
             color: #3f51b5;
         }
 
@@ -340,7 +356,7 @@
             element.classList.add('highlight');
             element.innerHTML += `
                 <div class="highlight-message">
-                    <span>${name}</span>은(는) <span class="counter">${counter}</span>카운터입니다.<br>
+                    <span>${name}</span>은(는) <span class="counter">${counter}</span> 카운터입니다.<br>
                     ${directionMessage}
                 </div>`;
             element.scrollIntoView({ behavior: 'smooth', block: 'center' });
