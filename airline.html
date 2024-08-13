@@ -114,28 +114,28 @@
         }
         .highlight {
             background-color: #ffeb3b;
-            padding: 20px; /* 상하 간격 유지 */
+            padding: 20px; /* 패딩을 넉넉하게 설정 */
             border-radius: 8px;
             margin-bottom: 10px;
             transition: all 0.3s ease;
-            display: flex; /* Flexbox 사용 */
-            flex-direction: column; /* 세로로 정렬 */
-            justify-content: center; /* 가운데 정렬 */
-            align-items: center; /* 가운데 정렬 */
-            max-height: none; /* 최대 높이를 제한하지 않음 */
-            overflow: visible; /* 결과가 영역을 넘어가지 않도록 함 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-height: none;
+            overflow: visible;
         }
 
         .highlight-message {
             margin-top: 10px;
             color: #0078a8;
             font-weight: normal;
-            font-size: 1.0em; 
+            font-size: 1.2em;
             line-height: 1.5em;
-            white-space: nowrap; /* 줄바꿈을 허용하지 않음 */
+            white-space: normal; /* 줄바꿈을 허용 */
             text-align: center;
-            overflow: hidden; /* 텍스트가 넘치지 않도록 설정 */
-            text-overflow: ellipsis; /* 넘친 텍스트를 말줄임표로 표시 */
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .highlight-message span {
             font-weight: bold;
@@ -151,13 +151,13 @@
         .t2-button {
             display: inline-block;
             padding: 10px 20px;
-            margin-top: 10px;
+            margin-top: 15px; /* 버튼과 텍스트 사이에 충분한 간격을 둠 */
             background-color: #0078a8;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
-            white-space: nowrap; /* 버튼 텍스트가 줄바꿈되지 않도록 설정 */
+            white-space: nowrap;
         }
 
         .t2-button:hover {
