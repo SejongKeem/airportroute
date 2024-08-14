@@ -10,7 +10,7 @@
                 color: #e0e0e0;
                 font-family: Arial, sans-serif;
                 text-align: center;
-                margin: 0;
+                margin-bottom: 20px;
                 padding: 0;
             }
 
@@ -52,33 +52,50 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                position: relative;
             }
 
             input[type="text"] {
-                padding: 10px;
+                padding: 15px 20px; /* 상하 폭을 넓게 조정 */
                 width: 70%;
                 font-size: 16px;
-                border-radius: 5px;
-                border: 1px solid #333;
-                background-color: #333;
+                border-radius: 30px; /* 모서리를 둥글게 */
+                border: 1px solid #444;
+                background-color: #333; /* 어두운 회색 배경 */
                 color: #e0e0e0;
+                outline: none; /* 포커스 시 외곽선 제거 */
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            input[type="text"]::placeholder {
+                color: #a0a0a0; /* '항공사 이름 또는 항공편명을 입력하세요' 문구의 색상 */
+                opacity: 1; /* 투명도 설정 */
             }
 
             .search-button {
-                padding: 10px;
-                background-color: transparent;
+                position: absolute;
+                right: 25px; /* 검색창 오른쪽에 버튼을 배치 */
+                background-color: #555;
                 border: none;
-                border-radius: 5px;
+                border-radius: 50%;
+                padding: 10px;
                 cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                transition: background-color 0.3s;
             }
 
             .search-button:hover {
-                background-color: #444444;
+                background-color: #777;
             }
 
             .search-button img {
                 filter: brightness(0) invert(1); /* 흰색 돋보기 아이콘 */
-            }
+                width: 20px;
+                height: 20px;
+            }       
 
             .category {
                 background-color: #333;
@@ -89,6 +106,10 @@
             }
 
             .category-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
                 color: #87cefa;
                 font-size: 1.5em;
             }
@@ -112,6 +133,13 @@
                 cursor: pointer;
             }
 
+            .airline-option.highlight {
+                background-color: #ffeb3b;
+                height: 100px;
+                display: block;
+                text-align: center;
+            }
+
             .airline-option img {
                 filter: brightness(0) invert(1); /* 이미지 색 반전 */
                 width: 40px;
@@ -133,6 +161,31 @@
                 overflow: visible;
             }
 
+            .highlight-message {
+                margin-top: 10px;
+                color: #bbbbbb;
+                font-weight: normal;
+                font-size: 1.0em;
+                line-height: 1.3em;
+                white-space: nowrap;
+                text-align: center;
+                overflow: hidden;
+                text-overflow: ellipsis ;
+            }
+
+            .highlight-message span {
+                font-weight: bold;
+                color: #ff8c00;
+            }
+
+            .counter {
+            color: #87cefa;
+            }
+
+            .highlight-message.counter {
+                color: #87cefa;
+            }
+
             .t2-button {
                 display: inline-block;
                 padding: 10px 10px;
@@ -148,27 +201,6 @@
 
             .t2-button:hover {
                 background-color: #005f7a;
-            }
-
-            .highlight-message {
-                margin-top: 10px;
-                color: #bbbbbb;
-                font-weight: normal;
-                font-size: 1.0em;
-                line-height: 1.3em;
-                white-space: nowrap;
-                text-align: center;
-                overflow: hidden
-                text-overflow: ellipsis;
-            }
-
-            .highlight-message span {
-                font-weight: bold;
-                color: #ff8c00;
-            }
-
-            .counter {
-                color: #87cefa;
             }
 
     </style>
