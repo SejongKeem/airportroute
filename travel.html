@@ -5,38 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>여행사 찾기</title>
     <style>
-        body {
+         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #1a1a1a; /* 다크 모드 배경색 */
+            color: #e0e0e0; /* 다크 모드 텍스트 색상 */
         }
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            background-color: #f0f0f0;
+            background-color: #1a1a1a; /* 다크 모드 배경색 */
         }
         .logo img {
             max-width: 200px;
+            filter: brightness(0) invert(1); /* 로고 이미지 색상 반전 */
         }
         .home-button {
             padding: 10px 20px;
-            background-color: #0078a8;
+            background-color: #005f7a; /* 다크 모드 버튼 색상 */
             color: white;
             border-radius: 5px;
             text-decoration: none;
         }
         .home-button:hover {
-            background-color: #005f7a;
+            background-color: #003f5c; /* 호버 색상 */
         }
         .container {
             margin-top: 20px;
         }
         h1 {
-            color: #333;
+            color: #e0e0e0; /* 다크 모드 텍스트 색상 */
         }
         .search-bar {
             margin: 20px;
@@ -46,13 +48,16 @@
             width: 70%;
             font-size: 16px;
             border-radius: 5px;
-            border: 1px solid #ccc;
+            border: 1px solid #555; /* 다크 모드 테두리 색상 */
+            background-color: #333; /* 다크 모드 검색창 배경 */
+            color: #e0e0e0; /* 텍스트 색상 */
         }
         .category {
-            background-color: #3366FF;
+            background-color: #333;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 30px;
+            border: 3px solid #555;
         }
         .category-header {
             display: flex;
@@ -60,7 +65,7 @@
             justify-content: center;
             margin-bottom: 20px;
             font-size: 1.5em;
-            color: #FFFF00;
+            color: #87cefa; /* 연한 하늘색 */
         }
         .category-header span {
             margin-right: 10px;
@@ -68,74 +73,27 @@
         .agency-option {
             margin: 10px auto;
             max-width: 300px;
-            background: white;
+            background: #555555; /* 다크 모드에서 더 연한 회색으로 조정 */
+            color: #e0e0e0;
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-decoration: none;
-            color: #333;
-            font-weight: bold;
             display: flex;
             align-items: center;
             transition: background-color 0.3s;
         }
         .agency-option:hover {
-            background-color: #e0e0e0;
-        }
-        .agency-option.highlight {
-            background-color: #ffeb3b;
+            background-color: #777777;
         }
         .agency-option img {
             width: 40px;
             height: auto;
             margin-right: 15px;
+            filter: brightness(0) invert(1); /* 이미지 색상 반전 */
         }
-        /* 다크 모드 스타일 */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #1a1a1a;
-                color: #e0e0e0;
-            }
-            .header {
-                background-color: #1a1a1a;
-            }
-            .logo img {
-                filter: brightness(0) invert(1); /* 로고 이미지 색상 반전 */
-            }
-            .home-button {
-                background-color: #005f7a;
-            }
-            .home-button:hover {
-                background-color: #003f5c;
-            }
-            h1 {
-                color: #e0e0e0;
-            }
-            .search-bar input[type="text"] {
-                background-color: #333;
-                color: #e0e0e0;
-                border: 1px solid #555;
-            }
-            .category {
-                background-color: #333;
-                border: 3px solid #555;
-            }
-            .category-header {
-                color: #87cefa; /* 연한 하늘색으로 변경 */
-            }
-            .agency-option {
-                background: #555555; /* 다크 모드에서 더 연한 회색으로 조정 */
-                color: #e0e0e0;
-            }
-            .agency-option:hover {
-                background-color: #777777;
-            }
-            .agency-option img {
-                filter: brightness(0) invert(1); /* 이미지 색상 반전 */
-            }
-            .agency-option.highlight {
-                background-color: #777777;
-            }
+        .agency-option.highlight {
+            background-color: #777777;
         }
     </style>
 </head>
@@ -164,7 +122,7 @@
                 롯데관광
             </a>
             <a href="#" class="agency-option" id="yellowballoon">
-                <img src="https://i.namu.wiki/i/tJvCaE7afjPsguRMD0hgSb3aAqU3hMxPudmZMSsV-obMqEhTTj4uCgj7BZwxB5ZfxsTYA6-OuubVAKhxbl20388XC8SNU1e3j8EdLU8ZVjtu2C9b9PHBa9EEXhGblPqeu0ErwM-G-Gh2_po5uwMrcw.webp" alt="노랑풍선 로고">
+                <img src="./images/yellow.svg" alt="노랑풍선 로고">
                 노랑풍선
             </a>
             <a href="#" class="agency-option" id="modetour">
@@ -176,7 +134,7 @@
                 NHN여행박사
             </a>
             <a href="#" class="agency-option" id="treasuretour">
-                <img src="./images/bomulsum.jpg" alt="보물섬투어 로고">
+                <img src="./images/bomulsum.png" alt="보물섬투어 로고">
                 보물섬투어
             </a>
         </div>
@@ -195,15 +153,15 @@
                 모두투어
             </a>
             <a href="#" class="agency-option" id="tomorrow">
-                <img src="https://smart.hanacard.co.kr/ATTACH/mou/images/event/main/logo_naeiltour02.png" alt="내일투어 로고">
+                <img src="./images/naeil.png" alt="내일투어 로고">
                 내일투어
             </a>
             <a href="#" class="agency-option" id="verygood">
-                <img src="https://i.namu.wiki/i/YVstrnqdDL-kCceIUiHsrPshX3pYMWpbSq_RGlD16sHHARQRtR_-6SY9WeGeztzkuvwaJStx3MBKHHfaz6wgqErzjMrI5apt7U8AkOYwHq-9-AJb90uGmTWGpTz44qiixqVG_uWrZt2BP1iqGPpm5Q.webp" alt="참좋은여행 로고">
+                <img src="./images/verygood.png" alt="참좋은여행 로고">
                 참좋은여행
             </a>
             <a href="#" class="agency-option" id="interpark">
-                <img src="https://i.namu.wiki/i/hAceIv2nFNEBwjW1HngaONWs6R5fH9bVjgV4CBHsSp9JwXb5nZzxYaLIOyUYetQfFfemLgyDes5wgVhI-FTAwfAnwmyQHHIkt1Y9uut1qITI5OO8yLK3a86UEPLRkJJrjKTnQjf3s_IaNEzQofdBBg.webp" alt="인터파크투어 로고">
+                <img src="./images/interpark.svg" alt="인터파크투어 로고">
                 인터파크투어
             </a>
         </div>

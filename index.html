@@ -10,29 +10,29 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #1a1a1a; /* 다크 모드 배경색 */
+            color: #e0e0e0; /* 다크 모드 텍스트 색 */
         }
         .container {
             margin-top: 50px;
         }
         h1 {
-            color: #333;
+            color: #e0e0e0; /* 다크 모드 텍스트 색 */
         }
         .option {
             margin: 20px auto;
             max-width: 300px;
-            background: white;
+            background: #333333; /* 다크 모드 배경색 */
+            color: #e0e0e0; /* 다크 모드 텍스트 색 */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             text-decoration: none;
-            color: #333;
-            font-weight: bold;
             display: block;
             transition: background-color 0.3s;
         }
         .option:hover {
-            background-color: #e0e0e0;
+            background-color: #444444; /* 다크 모드 호버 색상 */
         }
         .logo {
             margin-top: 20px;
@@ -41,27 +41,7 @@
         .logo img {
             max-width: 200px;
             cursor: pointer;
-        }
-        /* 다크 모드 스타일 */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #1a1a1a;
-                color: #e0e0e0;
-            }
-            h1 {
-                color: #e0e0e0;
-            }
-            .option {
-                background: #333333;
-                color: #e0e0e0;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            }
-            .option:hover {
-                background-color: #444444;
-            }
-            .logo img {
-                filter: brightness(0) invert(1); /* 로고 이미지 색상 반전 */
-            }
+            filter: brightness(0) invert(1); /* 로고 이미지 색상 반전 */
         }
     </style>
 </head>
