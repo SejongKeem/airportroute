@@ -2,43 +2,43 @@
     {
         "name": "아시아나항공",
         "callsign": "OZ",
-        "engname": "ASIANA",
+        "engname": "ASIANA AIRLINES",
         "counter": "A"
     },    
     {
         "name": "제주항공",
         "callsign": "7C",
-        "engname": "JEJU",
+        "engname": "JEJU AIR",
         "counter": "L"
     },
     {
         "name": "에어부산",
         "callsign": "BX",
-        "engname": "BUSAN",
+        "engname": "AIR BUSAN",
         "counter": "K"
     },
     {
         "name": "에어서울",
         "callsign": "RS",
-        "engname": "SEOUL",
+        "engname": "AIR SEOUL",
         "counter": "D"
     },
     {
         "name": "에어프레미아",
         "callsign": "YP",
-        "engname": "PREMIA",
+        "engname": "AIR PREMIA",
         "counter": "H"
     },
     {
         "name": "이스타항공",
         "callsign": "ZE",
-        "engname": "EASTAR",
+        "engname": "EASTAR JET",
         "counter": "H"
     },
     {
         "name": "티웨이항공",
         "callsign": "TW",
-        "engname": "TWAY",
+        "engname": "TWAY AIR",
         "counter": "F"
     },
     {
@@ -50,19 +50,19 @@
     {
         "name": "그레이터베이항공",
         "callsign": "HB",
-        "engname": "GREATER BAY",
+        "engname": "GREATER BAY AIRLINES",
         "counter": "E"
     },
     {
         "name": "로얄브루나이항공",
         "callsign": "BI",
-        "engname": "ROYAL BRUNEI",
+        "engname": "ROYAL BRUNEI AIRLINES",
         "counter": "K"
     },
     {
         "name": "라오항공",
         "callsign": "QV",
-        "engname": "LAO",
+        "engname": "LAO AIRLINES",
         "counter": "H"
     },
     {
@@ -74,67 +74,67 @@
     {
         "name": "말레이시아항공",
         "callsign": "MH",
-        "engname": "MALAYSIA",
+        "engname": "MALAYSIA AIRLINES",
         "counter": "M"
     },
     {
         "name": "몽골항공",
         "callsign": "OM",
-        "engname": "MONGOLIAN",
+        "engname": "MIAT MONGOLIAN AIRLINES",
         "counter": "J"
     },
     {
         "name": "미얀마국제항공",
         "callsign": "8M",
-        "engname": "MYANMAR",
+        "engname": "MYANMAR AIRWAYS INTERNATIONAL",
         "counter": "N"
     },
     {
         "name": "바틱에어",
         "callsign": "OD",
-        "engname": "BATIK",
+        "engname": "BATIK AIR",
         "counter": "H"
     },
     {
         "name": "베트남항공",
         "callsign": "VN",
-        "engname": "VIETNAM",
+        "engname": "VIETNAM AIRLINES",
         "counter": "E"
     },
     {
         "name": "북경수도항공",
         "callsign": "JD",
-        "engname": "BEIJING CAPITAL",
+        "engname": "BEIJING CAPITAL AIRLINES",
         "counter": "K"
     },
     {
         "name": "비엣젯항공",
         "callsign": "VJ",
-        "engname": "VIETJET",
+        "engname": "VIETJET AIR",
         "counter": "E"
     },
     {
         "name": "사우디아항공",
         "callsign": "SV",
-        "engname": "SAUDIA",
+        "engname": "SAUDIA AIRLINES",
         "counter": "F"
     },
     {
         "name": "사천항공",
         "callsign": "3U",
-        "engname": "SICHUAN",
+        "engname": "SICHUAN AIRLINES",
         "counter": "E"
     },
     {
         "name": "산동항공",
         "callsign": "SC",
-        "engname": "SHANDONG",
+        "engname": "SHANDONG AIRLINES",
         "counter": "N"
     },
     {
         "name": "상해항공",
         "callsign": "FM",
-        "engname": "SHANGHAI",
+        "engname": "SHANGHAI AIRLINES",
         "counter": "J"
     },
     {
@@ -146,19 +146,19 @@
     {
         "name": "스리랑카항공",
         "callsign": "UL",
-        "engname": "SRI LANKAN",
+        "engname": "SRI LANKAN AIRLINES",
         "counter": "H"
     },
     {
         "name": "스위스항공",
         "callsign": "LX",
-        "engname": "SWISS",
+        "engname": "SWISS AIRLINES",
         "counter": "J"
     },
     {
         "name": "스카이앙코르항공",
         "callsign": "ZA",
-        "engname": "SKY ANGKOR",
+        "engname": "SKY ANGKOR AIRLINES",
         "counter": "K"
     },
     {
@@ -170,19 +170,19 @@
     {
         "name": "심천항공",
         "callsign": "ZH",
-        "engname": "SHENZHEN",
+        "engname": "SHENZHEN AIRLINES",
         "counter": "M"
     },
     {
         "name": "싱가포르항공",
         "callsign": "SQ",
-        "engname": "SINGAPORE",
+        "engname": "SINGAPORE AIRLINES",
         "counter": "D"
     },
     {
         "name": "아메리칸항공",
         "callsign": "AA",
-        "engname": "AMERICAN",
+        "engname": "AMERICAN AIRLINES",
         "counter": "K"
     },
     {
@@ -194,7 +194,7 @@
     {
         "name": "에바항공",
         "callsign": "BR",
-        "engname": "EVA",
+        "engname": "EVA AIR",
         "counter": "E"
     },
     {
@@ -206,13 +206,13 @@
     {
         "name": "에어마카오",
         "callsign": "NX",
-        "engname": "MACAU",
+        "engname": "AIR MACAU",
         "counter": "N"
     },
     {
         "name": "에어아스타나",
         "callsign": "KC",
-        "engname": "ASTANA",
+        "engname": "AIR ASTANA",
         "counter": "N"
     },
     {
@@ -224,7 +224,7 @@
     {
         "name": "에어인디아",
         "callsign": "AI",
-        "engname": "INDIA",
+        "engname": "AIR INDIA",
         "counter": "H"
     },
     {
@@ -236,31 +236,31 @@
     {
         "name": "에어캐나다",
         "callsign": "AC",
-        "engname": "CANADA",
+        "engname": "AIR CANADA",
         "counter": "J"
     },
     {
         "name": "에티오피아항공",
         "callsign": "ET",
-        "engname": "ETHIOPIAN",
+        "engname": "ETHIOPIAN AIRLINES",
         "counter": "F"
     },
     {
         "name": "에티하드항공",
         "callsign": "EY",
-        "engname": "ETIHAD",
+        "engname": "ETIHAD AIRWAYS",
         "counter": "K"
     },
     {
         "name": "우즈베키스탄항공",
         "callsign": "HY",
-        "engname": "UZBEKISTAN",
+        "engname": "UZBEKISTAN AIRWAYS",
         "counter": "E"
     },
     {
         "name": "유나이티드항공",
         "callsign": "UA",
-        "engname": "UNITED",
+        "engname": "UNITED AIRLINES",
         "counter": "D"
     },
     {
@@ -296,25 +296,25 @@
     {
         "name": "천진항공",
         "callsign": "GS",
-        "engname": "TIANJIN",
+        "engname": "TIANJIN AIRLINES",
         "counter": "J"
     },
     {
         "name": "청도항공",
         "callsign": "QW",
-        "engname": "QINGDAO",
+        "engname": "QINGDAO AIRLINES",
         "counter": "J"
     },
     {
         "name": "춘추항공",
         "callsign": "9C",
-        "engname": "SPRING",
+        "engname": "SPRING AIRLINES",
         "counter": "E"
     },
     {
         "name": "카타르항공",
         "callsign": "QR",
-        "engname": "QATAR",
+        "engname": "QATAR AIR",
         "counter": "J"
     },
     {
@@ -326,7 +326,7 @@
     {
         "name": "콴타스항공",
         "callsign": "QF",
-        "engname": "QANTAS",
+        "engname": "QANTAS AIRWAYS",
         "counter": "H"
     },
     {
@@ -350,19 +350,19 @@
     {
         "name": "터키항공",
         "callsign": "TK",
-        "engname": "TURKISH",
+        "engname": "TURKISH AIRLINES",
         "counter": "D"
     },
     {
         "name": "폴란드항공",
         "callsign": "LO",
-        "engname": "LOT",
+        "engname": "LOT POLISH AIRLINES",
         "counter": "K"
     },
     {
         "name": "피치항공",
         "callsign": "MM",
-        "engname": "PEACH",
+        "engname": "PEACH AVIATION",
         "counter": "K"
     },
     {
@@ -380,25 +380,25 @@
     {
         "name": "필리핀항공",
         "callsign": "PR",
-        "engname": "PHILIPPINE",
+        "engname": "PHILIPPINE AIR",
         "counter": "M"
     },
     {
         "name": "하와이안항공",
         "callsign": "HA",
-        "engname": "HAWIIAN",
+        "engname": "HAWIIAN AIRLINES",
         "counter": "J"
     },
     {
         "name": "홍콩익스프레스",
         "callsign": "UO",
-        "engname": "HK EXPRESS",
+        "engname": "HK HONGKONG EXPRESS",
         "counter": "H"
     },
     {
         "name": "대한항공",
         "callsign": "KE",
-        "engname": "KOREAN",
+        "engname": "KOREAN AIR",
         "counter": "T2"
     },
     {
@@ -410,7 +410,7 @@
     {
         "name": "샤먼항공",
         "callsign": "MF",
-        "engname": "XIAMEN",
+        "engname": "XIAMEN AIR",
         "counter": "T2"
     },
     {
@@ -434,19 +434,19 @@
     {
         "name": "네덜란드항공",
         "callsign": "KL",
-        "engname": "KLM DUTCH",
+        "engname": "KLM ROYAL DUTCH AIRLINES",
         "counter": "T2"
     },
     {
         "name": "델타항공",
         "callsign": "DL",
-        "engname": "DELTA",
+        "engname": "DELTA AIRLINES",
         "counter": "T2"
     },
     {
         "name": "아에로멕시코",
         "callsign": "AM",
-        "engname": "AEROMEXICO",
+        "engname": "AERO MEXICO",
         "counter": "T2"
     }
 ]
