@@ -298,6 +298,15 @@
         function searchAirlineHandler() {
             var input = document.getElementById('searchInput').value.toUpperCase();
 
+                // '에어차이나'를 '중국국제항공'으로 매핑
+            if (input.includes('에어차이나') {
+                input = '중국국제항공';
+            }
+
+            if (input.includes('제트스타') {
+                input = '젯스타';
+            }
+
             // 숫자가 포함된 경우, 콜사인 부분만 추출 (첫 두 글자 또는 첫 글자 + 숫자 제거)
             var inputWithoutNumbers = input.replace(/\d+$/, '');
 
