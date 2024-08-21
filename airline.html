@@ -298,13 +298,36 @@
         function searchAirlineHandler() {
             var input = document.getElementById('searchInput').value.toUpperCase();
 
-                // '에어차이나'를 '중국국제항공'으로 매핑
+            // 헷갈릴 수 있는 항공사 이름 매핑
             if (input.includes('에어차이나')) {
                 input = '중국국제항공';
             }
-
             if (input.includes('제트스타')) {
                 input = '젯스타';
+            }
+            if (input.includes('이티하드')) {
+                input = '에티하드항공';
+            }
+            if (input.includes('라오스')) {
+                input = '라오항공';
+            }
+            if (input.includes('산둥')) {
+                input = '산동항공';
+            }
+            if (input.includes('상하이')) {
+                input = '상해항공';
+            }
+            if (input.includes('선전')) {
+                input = '심천항공';
+            }
+            if (input.includes('인도')) {
+                input = '에어인디아';
+            }
+            if (input.includes('텐진') || input.includes('톈진')) {
+                input = '천진항공';
+            }
+            if (input.includes('캐피탈')) {
+                input = '북경수도항공';
             }
 
             // 숫자가 포함된 경우, 콜사인 부분만 추출 (첫 두 글자 또는 첫 글자 + 숫자 제거)
